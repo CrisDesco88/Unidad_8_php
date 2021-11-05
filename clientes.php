@@ -20,6 +20,7 @@
     </header>
     <section id="contenido">
     <h2>Clientes</h2>
+    <div class="contenedor-pedidos">
     <?php
        include('conexion.php');  
        $consulta_cliente = mysqli_query($conexion, "SELECT * FROM pedidos_cliente"); 
@@ -28,13 +29,14 @@
         <h3>ID pedido: <?php echo $listar_datos['id_pedido'];?></h3>
         <h3>Descripción: <?php echo $listar_datos['producto'];?></h3>
         <h3>Cantidad: <?php echo $listar_datos['cantidad'];?></h3>
-        <h3>Precio: <?php echo $listar_datos['precio'];?></h3>
+        <h3>Precio: $ <?php echo $listar_datos['precio'];?></h3>
     </div>
 
 
     <?php
        }
     ?>
+    </div>
     </section>
 
 <footer>
