@@ -21,7 +21,19 @@
     <section id="contenido">
     <h2>Clientes</h2>
     <?php
-       include('conexion.php');   
+       include('conexion.php');  
+       $consulta_cliente = mysqli_query($conexion, "SELECT * FROM pedidos_cliente"); 
+       while($listar_datos = mysqli_fetch_assoc($consulta_cliente)) { ?>
+    <div class="datos_pedidos">
+        <h3>ID pedido: <?php echo $listar_datos['id_pedido'];?></h3>
+        <h3>Descripción: <?php echo $listar_datos['producto'];?></h3>
+        <h3>Cantidad: <?php echo $listar_datos['cantidad'];?></h3>
+        <h3>Precio: <?php echo $listar_datos['precio'];?></h3>
+    </div>
+
+
+    <?php
+       }
     ?>
     </section>
 
