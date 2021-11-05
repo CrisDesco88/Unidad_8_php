@@ -269,6 +269,25 @@ footer a {
 
 /* //////////////////// FIN ESTILOS SECCION CONTACTO\\\\\\\\\\\\\\\\\\\\\ */
 
+/* //////////////////// ESTILOS SECCION CLIENTES\\\\\\\\\\\\\\\\\\\\\ */
+.contenedor-pedidos {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 1em;
+	row-gap: 1em;
+}
+
+.datos_pedidos {
+	background-color: darkseagreen;
+	padding: 0.75em;
+	border: 1px solid #333;
+	border-radius: 5px;
+	border-style: outset;
+}
+
+
+/* //////////////////// FIN ESTILOS SECCION CLIENTES\\\\\\\\\\\\\\\\\\\\\ */
+
 @media all and (min-width: 600px) and (max-width: 1023px) {
 #contenedor {
 	width:580px;
